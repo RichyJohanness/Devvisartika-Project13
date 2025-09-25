@@ -9,6 +9,11 @@ import Beranda from "./pages/Beranda";
 import TentangKami from "./pages/TentangKami";
 import VisiMisi from "./pages/VisiMisi";
 import Kontak from "./pages/Kontak";
+import Education from "./pages/Education";
+import RisetKonsultasi from "./pages/RisetKonsultasi";
+import JurnalProofread from "./pages/JurnalProofread";
+import Penerbitan from "./pages/Penerbitan";
+import KonsultasiRelasi from "./pages/KonsultasiRelasi";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +31,11 @@ const App = () => (
               <Route path="/" element={<Beranda />} />
               <Route path="/tentang" element={<TentangKami />} />
               <Route path="/visi-misi" element={<VisiMisi />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/riset-konsultasi" element={<RisetKonsultasi />} />
+              <Route path="/jurnal" element={<JurnalProofread />} />
+              <Route path="/penerbitan" element={<Penerbitan />} />
+              <Route path="/konsultasi-relasi" element={<KonsultasiRelasi />} />
               <Route path="/kontak" element={<Kontak />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

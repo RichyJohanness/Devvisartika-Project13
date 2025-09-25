@@ -9,13 +9,25 @@ const Navigation = () => {
 
   const menuItems = [
     { name: "Beranda", path: "/" },
-    { name: "Tentang Kami", path: "/tentang" },
-    { name: "Visi & Misi", path: "/visi-misi" },
-    { name: "Education", path: "/education" },
-    { name: "Riset & Konsultasi", path: "/riset-konsultasi" },
-    { name: "Jurnal Proofread & Translate", path: "/jurnal" },
-    { name: "Penerbitan", path: "/penerbitan" },
-    { name: "Konsultasi Relasi", path: "/konsultasi-relasi" },
+    { 
+      name: "Tentang", 
+      path: "/tentang",
+      submenu: [
+        { name: "Tentang Kami", path: "/tentang" },
+        { name: "Visi & Misi", path: "/visi-misi" }
+      ]
+    },
+    { 
+      name: "Layanan", 
+      path: "#",
+      submenu: [
+        { name: "Education & Training", path: "/education" },
+        { name: "Riset & Konsultasi", path: "/riset-konsultasi" },
+        { name: "Jurnal Proofread & Translate", path: "/jurnal" },
+        { name: "Penerbitan", path: "/penerbitan" },
+        { name: "Konsultasi Relasi", path: "/konsultasi-relasi" }
+      ]
+    },
     { name: "Kontak", path: "/kontak" },
   ];
 
