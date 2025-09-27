@@ -9,6 +9,7 @@ import Beranda from "./pages/Beranda";
 import TentangKami from "./pages/TentangKami";
 import VisiMisi from "./pages/VisiMisi";
 import Kontak from "./pages/Kontak";
+import Layanan from "./pages/Layanan"; // Import page Layanan
 import Education from "./pages/Education";
 import RisetKonsultasi from "./pages/RisetKonsultasi";
 import JurnalProofread from "./pages/JurnalProofread";
@@ -31,6 +32,8 @@ const App = () => (
               <Route path="/" element={<Beranda />} />
               <Route path="/tentang" element={<TentangKami />} />
               <Route path="/visi-misi" element={<VisiMisi />} />
+              {/* Tambahkan rute untuk halaman Layanan */}
+              <Route path="/layanan" element={<Layanan />} />
               <Route path="/education" element={<Education />} />
               <Route path="/riset-konsultasi" element={<RisetKonsultasi />} />
               <Route path="/jurnal" element={<JurnalProofread />} />
