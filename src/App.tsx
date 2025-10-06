@@ -7,13 +7,13 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Beranda from "./pages/Beranda";
 import TentangKami from "./pages/TentangKami";
-import VisiMisi from "./pages/VisiMisi";
 import Kontak from "./pages/Kontak";
-import Education from "./pages/Education";
-import RisetKonsultasi from "./pages/RisetKonsultasi";
-import JurnalProofread from "./pages/JurnalProofread";
-import Penerbitan from "./pages/Penerbitan";
-import KonsultasiRelasi from "./pages/KonsultasiRelasi";
+import Layanan from "./pages/Layanan";
+import KonsultasiBimbingan from "./pages/KonsultasiBimbingan";
+import PelatihanKeterampilan from "./pages/PelatihanKeterampilan";
+import PendampinganRelasi from "./pages/PendampinganRelasi";
+import JembatanPeneliti from "./pages/JembatanPeneliti";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,12 +30,12 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Beranda />} />
               <Route path="/tentang" element={<TentangKami />} />
-              <Route path="/visi-misi" element={<VisiMisi />} />
-              <Route path="/education" element={<Education />} />
-              <Route path="/riset-konsultasi" element={<RisetKonsultasi />} />
-              <Route path="/jurnal" element={<JurnalProofread />} />
-              <Route path="/penerbitan" element={<Penerbitan />} />
-              <Route path="/konsultasi-relasi" element={<KonsultasiRelasi />} />
+              <Route path="/layanan" element={<Layanan />} />
+              <Route path="/layanan/konsultasi-bimbingan" element={<KonsultasiBimbingan />} />
+              <Route path="/layanan/pelatihan-keterampilan" element={<PelatihanKeterampilan />} />
+              <Route path="/layanan/pendampingan-relasi" element={<PendampinganRelasi />} />
+              <Route path="/layanan/jembatan-peneliti" element={<JembatanPeneliti />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/kontak" element={<Kontak />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
