@@ -1,4 +1,3 @@
-//ekspor
 export default {
   plugins: {
     tailwindcss: {},

@@ -4,35 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Devvisartika Movement Design System */
+
 @layer base {
   :root {
-    --primary: 210 57% 28%;     
+    /* Core Brand Colors */
+    --primary: 210 57% 28%;        /* #1E3D73 - Deep navy blue */
     --primary-foreground: 210 40% 98%;
-    --accent: 326 71% 72%;       
+    --accent: 326 71% 72%;         /* #f29bd1 - Soft pink */
     --accent-foreground: 210 57% 28%;
-    --warm: 36 75% 89%;          
+    --warm: 36 75% 89%;            /* #FADAC4 - Warm beige */
     --warm-foreground: 210 57% 28%;
 
+    /* Background & Layout */
     --background: 0 0% 100%;
-    --background-texture: 36 75% 97%;  
+    --background-texture: 36 75% 97%;  /* Very light warm tone */
     --foreground: 210 57% 28%;
 
+    /* Card & Surface */
     --card: 0 0% 100%;
     --card-foreground: 210 57% 28%;
     --surface: 36 75% 98%;
     --surface-foreground: 210 57% 28%;
 
+    /* Interactive Elements */
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 210 57% 28%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
+    /* System Colors */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 210 57% 28%;
 
+    /* Design System Variables */
     --radius: 0.75rem;
     
     /* Gradients */

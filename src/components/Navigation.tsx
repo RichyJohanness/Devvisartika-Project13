@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";     
-import judul from "@/assets/judul.png";    
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +19,7 @@ const Navigation = () => {
     },
     { 
       name: "Layanan", 
-      path: "/layanan",
+      path: "#",
       submenu: [
         { name: "Education & Training", path: "/education" },
         { name: "Riset & Konsultasi", path: "/riset-konsultasi" },
@@ -39,19 +37,10 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
-          {/* Logo + Judul */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img 
-              src={logo} 
-              alt="Logo" 
-              className="h-10 w-auto object-contain"
-            />
-            <img 
-              src={judul} 
-              alt="Judul" 
-              className="h-8 md:h-10 w-auto object-contain"
-            />
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 font-bold text-xl text-primary">
+            <Star className="h-6 w-6 text-accent star-float" />
+            <span className="text-gradient-primary">Devvisartika</span>
           </Link>
 
           {/* Desktop Menu */}

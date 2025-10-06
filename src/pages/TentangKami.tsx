@@ -1,234 +1,164 @@
-import { useState, useEffect } from "react";
-import { ChevronDown, ChevronUp, BookOpen, Users, Heart, Award } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import heroImage from "@/assets/dewi-sartika-inspiration.jpg";
+import { Heart, Star, Users, BookOpen } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import dewisartikaImage from "@/assets/dewi-sartika-inspiration.jpg";
 
 const TentangKami = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
-
-  const fullProfile = `Devvisartika lahir dari inspirasi perjuangan Dewi Sartika (1884–1947), seorang pahlawan nasional perempuan yang memberikan kontribusi nyata terhadap pendidikan Indonesia. Beliau mendirikan sekolah pertama khusus perempuan di Hindia Belanda, sebuah langkah berani yang pada masanya dianggap melawan arus. Melalui pendidikan, Dewi Sartika membuka jalan bagi banyak perempuan agar dapat mengakses keterampilan yang sebelumnya hanya diperuntukkan bagi laki-laki.
-
-Namun, meski kontribusinya begitu besar, nama Dewi Sartika sering kali tenggelam dalam narasi sejarah. Ia tidak sepopuler tokoh perempuan lain seperti Raden Adjeng Kartini, meskipun kiprahnya berdampak luas dan aplikatif. Inilah yang menjadi dasar pemilihan nama organisasi Devvisartika. Organisasi ini hadir sebagai bentuk penghormatan sekaligus pengingat, bahwa sejarah tidak hanya dimiliki oleh tokoh yang populer, melainkan juga oleh mereka yang karyanya berakar pada kehidupan nyata masyarakat dan memberikan perubahan transformatif.
-
-Devvisartika berdiri dengan semangat menghidupkan kembali nilai perjuangan Dewi Sartika: keberanian, inklusivitas, dan keberpihakan pada kelompok yang sering dipinggirkan. Organisasi ini menjadi ruang pendidikan, pendampingan, dan pelatihan yang berpijak pada prinsip interseksionalitas, yakni kesadaran bahwa ketidakadilan tidak hanya disebabkan oleh satu faktor tunggal, melainkan hasil persinggungan dari gender, kelas, etnis, orientasi seksual, disabilitas, dan konteks sosial lainnya. Melalui pendekatan ini, Devvisartika berkomitmen untuk menciptakan ruang belajar yang adil, terbuka, dan transformatif.`;
-
-  const previewText = fullProfile.split('\n\n')[0];
-
   const values = [
     {
-      icon: BookOpen,
+      icon: Heart,
       title: "Keberanian",
-      description: "Berani melawan arus demi kesetaraan pendidikan"
+      description: "Berani menghadapi tantangan dan memperjuangkan keadilan sosial"
     },
     {
       icon: Users,
       title: "Inklusivitas",
-      description: "Terbuka untuk semua lapisan masyarakat"
+      description: "Menciptakan ruang yang aman dan terbuka untuk semua identitas"
     },
     {
-      icon: Heart,
-      title: "Keberpihakan",
-      description: "Berpihak pada kelompok yang terpinggirkan"
+      icon: BookOpen,
+      title: "Keadilan",
+      description: "Memperjuangkan akses pendidikan yang setara untuk semua kalangan"
     },
     {
-      icon: Award,
-      title: "Interseksionalitas",
-      description: "Memahami kompleksitas identitas dan ketidakadilan"
+      icon: Star,
+      title: "Integritas",
+      description: "Berkomitmen pada transparansi dan akuntabilitas dalam setiap langkah"
     }
   ];
 
-  const misi = [
-    "Menyediakan pendampingan penelitian, penulisan, dan pengembangan akademik yang dapat diakses lintas latar belakang, gender, dan kelas sosial.",
-    "Menghadirkan pelatihan yang tidak hanya menyiapkan individu memasuki dunia kerja, tetapi juga memperkuat kapasitas mereka dalam menghadapi ketidaksetaraan struktural.",
-    "Memberikan ruang pendampingan relasi yang berperspektif queer-feminist, menghargai keberagaman identitas, dan mendorong kehidupan berelasi yang adil serta sehat.",
-    "Menjadi penghubung antara peneliti dengan komunitas sosial, memastikan penelitian berjalan etis, partisipatif, dan bermanfaat bagi masyarakat yang diteliti.",
-    "Mendorong praktik pendidikan yang interseksional—yang memahami kerentanan seseorang tidak hanya dari satu faktor, melainkan juga hasil persinggungan berbagai identitas sosial.",
-    "Mengangkat kembali warisan tokoh yang kurang populer tetapi berdampak besar, sebagai simbol bahwa kontribusi bermakna tidak selalu lahir dari sorotan dan popularitas."
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Tentang Devvisartika"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/80"></div>
-        </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto" data-aos="fade-up">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4">
-            Tentang Kami
+      <section className="section-padding bg-gradient-to-r from-primary to-accent text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Tentang <span className="text-warm">Kami</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-            Menghidupkan kembali semangat Dewi Sartika untuk pendidikan inklusif dan berkeadilan
+          <p className="text-xl md:text-2xl text-white/90">
+            Mengenal lebih dekat perjalanan dan komitmen Devvisartika Movement 
+            dalam mewujudkan pendidikan inklusif
           </p>
         </div>
       </section>
 
-      {/* Tagline Section */}
-      <section className="py-12 bg-accent/10" data-aos="fade-up">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl md:text-3xl font-heading font-semibold text-primary">
-              "Devvisartika: Ruang Belajar yang Inklusif dan Berkeadilan"
-            </p>
+      {/* Story Section */}
+      <section className="section-padding bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">
+                <span className="text-gradient-primary">Latar Belakang Organisasi</span>
+              </h2>
+              <div className="space-y-6 text-muted-foreground text-lg">
+                <p>
+                  Devvisartika Movement lahir dari keprihatinan mendalam terhadap 
+                  ketimpangan akses pendidikan dan kurangnya perspektif inklusif 
+                  dalam sistem edukasi di Indonesia.
+                </p>
+                <p>
+                  Kami percaya bahwa pendidikan adalah hak fundamental setiap individu, 
+                  tanpa memandang latar belakang, identitas, atau orientasi mereka. 
+                  Organisasi ini hadir sebagai jembatan untuk menciptakan ruang 
+                  pembelajaran yang aman, suportif, dan memberdayakan.
+                </p>
+                <p>
+                  Dengan menggabungkan nilai-nilai progresif dan pendekatan akademik 
+                  yang rigorous, kami berkomitmen untuk mengembangkan ekosistem 
+                  pendidikan yang tidak hanya berkualitas, tetapi juga berkeadilan.
+                </p>
+              </div>
+            </div>
+            <div className="order-first lg:order-last">
+              <div className="card-elegant overflow-hidden">
+                <img 
+                  src={dewisartikaImage} 
+                  alt="Inspirasi Dewi Sartika"
+                  className="w-full h-96 object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Profile Section */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8 text-center" data-aos="fade-up">
-              Profil Organisasi
-            </h2>
-            
-            <div className="card-elegant p-8 md:p-12" data-aos="fade-up" data-aos-delay="100">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                  {isExpanded ? fullProfile : previewText}
-                </p>
-              </div>
-              
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="mt-6 flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors mx-auto"
-              >
-                {isExpanded ? (
-                  <>
-                    <span>Tampilkan Lebih Sedikit</span>
-                    <ChevronUp className="w-5 h-5" />
-                  </>
-                ) : (
-                  <>
-                    <span>Baca Selengkapnya</span>
-                    <ChevronDown className="w-5 h-5" />
-                  </>
-                )}
-              </button>
+      {/* Dewi Sartika Inspiration */}
+      <section className="section-padding section-warm">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">
+            Inspirasi dari <span className="text-gradient-accent">Dewi Sartika</span>
+          </h2>
+          <div className="card-elegant p-8 md:p-12">
+            <blockquote className="text-xl md:text-2xl text-muted-foreground italic mb-6">
+              "Pendidikan adalah kunci untuk membuka pintu kemerdekaan dan kesetaraan. 
+              Setiap individu berhak mendapatkan akses pendidikan yang berkualitas, 
+              tanpa dibatasi oleh gender, status sosial, atau latar belakang apapun."
+            </blockquote>
+            <div className="text-lg">
+              <p className="mb-4">
+                Dewi Sartika (1884-1947) adalah pionir pendidikan perempuan Indonesia 
+                yang mendirikan Sekolah Istri pada tahun 1904. Visinya yang revolusioner 
+                tentang pendidikan inklusif menjadi fondasi semangat kami.
+              </p>
+              <p>
+                Seperti Dewi Sartika yang berjuang melawan keterbatasan zaman untuk 
+                memberikan akses pendidikan kepada perempuan, kami melanjutkan perjuangan 
+                tersebut dengan fokus pada inklusivitas yang lebih luas, mencakup 
+                keberagaman identitas dan perspektif dalam dunia pendidikan modern.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="section-padding bg-surface/50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-12 text-center" data-aos="fade-up">
-            Nilai-Nilai Kami
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <section className="section-padding bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-gradient-primary">Nilai-Nilai Kami</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Prinsip-prinsip yang menjadi pedoman dalam setiap langkah 
+              dan keputusan organisasi
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div
-                key={index}
-                className="card-elegant p-6 text-center group hover:border-accent/50"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  <value.icon className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {value.description}
-                </p>
-              </div>
+              <Card key={index} className="card-elegant text-center group">
+                <CardHeader>
+                  <value.icon className="h-16 w-16 text-accent mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <CardTitle className="text-2xl">{value.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{value.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8 text-center" data-aos="fade-up">
-              Visi
-            </h2>
-            
-            <div className="card-elegant p-8 md:p-12 bg-gradient-to-br from-primary/5 to-accent/5 border-accent/20" data-aos="fade-up" data-aos-delay="100">
-              <p className="text-lg md:text-xl text-foreground leading-relaxed text-center">
-                Mewujudkan ruang pendidikan, pendampingan, dan pelatihan yang inklusif, berperspektif, interseksional, serta meneladani semangat Dewi Sartika dalam memperjuangkan hak belajar dan kesetaraan bagi semua lapisan masyarakat.
+      {/* Commitment Section */}
+      <section className="section-padding bg-gradient-to-r from-accent to-warm text-accent-foreground">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Komitmen Kami</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="card-elegant p-6 bg-white/10 backdrop-blur-sm border-white/20">
+              <h3 className="text-2xl font-bold mb-4">Untuk Komunitas</h3>
+              <p>
+                Menciptakan ruang yang aman dan suportif bagi semua anggota komunitas 
+                untuk belajar, berkembang, dan berkontribusi sesuai dengan potensi 
+                dan identitas mereka.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="section-padding bg-surface/50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-12 text-center" data-aos="fade-up">
-              Misi
-            </h2>
-            
-            <div className="space-y-4">
-              {misi.map((item, index) => (
-                <div
-                  key={index}
-                  className="card-elegant p-6 md:p-8 flex gap-4 group hover:border-accent/50"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center transition-colors">
-                      <span className="text-accent font-heading font-bold text-lg">
-                        {index + 1}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed flex-1">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <div className="card-elegant p-8 md:p-12 bg-gradient-to-br from-primary/10 to-accent/10 border-accent/20">
-              <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                Mari Bergabung Bersama Kami
-              </h3>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Bersama kita ciptakan ruang belajar yang inklusif, adil, dan transformatif untuk semua
+            <div className="card-elegant p-6 bg-white/10 backdrop-blur-sm border-white/20">
+              <h3 className="text-2xl font-bold mb-4">Untuk Masa Depan</h3>
+              <p>
+                Membangun sistem pendidikan yang berkelanjutan, adaptif, dan mampu 
+                merespons kebutuhan masyarakat yang terus berkembang dengan tetap 
+                menjunjung tinggi nilai-nilai kemanusiaan.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/layanan"
-                  className="btn-hero inline-block"
-                >
-                  Jelajahi Layanan
-                </a>
-                <a
-                  href="/kontak"
-                  className="btn-outline-accent inline-block"
-                >
-                  Hubungi Kami
-                </a>
-              </div>
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ const Footer = () => {
                 Dewi Sartika dalam mewujudkan keadilan sosial dan kesetaraan pendidikan.
               </p>
               <div className="flex space-x-4">
-                <Button variant="outline" size="icon" className="border-primary-foreground/20 text-accent hover:bg-accent hover:text-accent-foreground">
+                <Button variant="outline" size="icon" className="border-primary-foreground/20 text-primary-foreground hover:bg-accent hover:text-accent-foreground">
                   <Mail className="h-4 w-4" />
                 </Button>
               </div>
@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Bottom Bar */}
           <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; 2025 Devvisartika Movement. Semua hak dilindungi undang-undang.</p>
+            <p>&copy; 2024 Devvisartika Movement. Semua hak dilindungi undang-undang.</p>
           </div>
         </div>
       </div>
